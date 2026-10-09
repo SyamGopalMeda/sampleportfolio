@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #080A0D;
+    --bg-secondary: #101419;
+    --bg-card: #12171E;
+    --bg-card-hover: #171E27;
+    --border-subtle: #252B32;
+    --border-light: #323A44;
+    --accent-lime: #C4F36B;
+    --accent-lime-muted: rgba(196, 243, 107, 0.15);
+    --text-primary: #F3F4F0;
+    --text-secondary: #9BA3AD;
+    --text-muted: #646E7A;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Technical grid texture */
+.tech-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(37, 43, 50, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 43, 50, 0.35) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.tech-dots-pattern {
+  background-image: radial-gradient(rgba(196, 243, 107, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Radial atmospheric glows */
+.glow-spot-lime {
+  background: radial-gradient(circle 350px at 50% 50%, rgba(196, 243, 107, 0.08), transparent 70%);
+}
+
+.glow-spot-ambient {
+  background: radial-gradient(circle 500px at 50% 50%, rgba(40, 58, 80, 0.12), transparent 70%);
+}
+
+/* Glass & Card styles */
+.glass-panel {
+  background: rgba(16, 20, 25, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(37, 43, 50, 0.8);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 28, 36, 0.85);
+  border-color: rgba(196, 243, 107, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(196, 243, 107, 0.05);
+}
+
+/* Custom code & monospace tags */
+.font-mono-tech {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080A0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #252B32;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #39424D;
+}
